@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Lançamento Oblíquo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="controls">
+        <label for="vo">Velocidade Inicial (V<sub>0</sub>):</label>
+        <input type="range" id="vo" min="0" max="100" value="50" step="1" class="range">
+        <input id="voInput" class="small-input" min="0" max="100" value="50" step="1"> m/s
+        <br>
+        <label for="g">Gravidade (g):</label>
+        <input type="range" id="g" min="1" max="10" value="10" step="0.1" class="range">
+        <input id="gInput" class="small-input" min="1" max="10" value="10" step="0.1"> m/s<sup>2</sup>
+        <br>
+        <label for="angle">Ângulo de Lançamento:</label>
+        <input type="range" id="angle" min="0" max="90" value="45" step="1" class="range">
+        <input id="angleInput" class="small-input" min="0" max="90" value="45" step="1"> °
+        <br>
+        <label for="y0">Posição de Lançamento (Y<sub>0</sub>):</label>
+        <input type="range" id="y0" min="0" max="500" value="0" step="1" class="range">
+        <input id="y0Input" class="small-input" min="0" max="500" value="0" step="1"> m
+        <br>
+        <label for="speed">Velocidade da Simulação:</label>
+        <input type="range" id="speed" min="50" max="100" value="50" step="1" class="range">
+        <input id="speedInput" class="small-input" min="50" max="100" value="50" step="1"> m/s
+        <br>
+        <div align="center">
+            <button id="start" class="buttons">Iniciar Trajetória</button>
+            <button id="reset" class="buttons">Reiniciar</button>
+            <button id="clear" class="buttons">Apagar Trajetória</button>
+        </div>
+    </div>
+    <canvas id="simulationCanvas"></canvas>
+    <script src="Simulator.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
